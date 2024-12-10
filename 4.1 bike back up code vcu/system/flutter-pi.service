@@ -1,0 +1,16 @@
+[Unit]
+Description=Flutter Application Runner
+After = systemd-user-sessions.service
+
+[Service]
+Environment=XDG_RUNTIME_DIR=/run/user/1001/
+ExecStart=/usr/bin/flutter-pi --release /home/root/release --purge-persistent-cache
+User=root
+Restart=always
+RestartSec=3
+CPUQuota=70%
+MemoryMax=768M
+MemorySwapMax=512M
+
+[Install]
+WantedBy=graphical.target

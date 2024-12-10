@@ -1,0 +1,5 @@
+[Unit] 
+Description=Compress Specific Log File
+[Service] 
+Type=oneshot 
+ExecStart=/home/root/script_files/compress-logs.sh

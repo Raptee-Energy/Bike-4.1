@@ -1,0 +1,13 @@
+[Unit]
+Description = ZOHO-IOT-CLOUD
+StartLimitIntervalSec=0
+
+[Service]
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/usr/error_test
+ExecStart=/usr/error_test/zoho
+
+[Install]
+WantedBy=multi-user.target

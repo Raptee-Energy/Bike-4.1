@@ -1,0 +1,11 @@
+[Unit]
+Description=Raptee OTA Configuration Service
+After=network.target
+
+[Service]
+RemainAfterExit=true
+Type=oneshot
+ExecStart=/usr/sbin/rapteeota
+
+[Install]
+WantedBy=multi-user.target

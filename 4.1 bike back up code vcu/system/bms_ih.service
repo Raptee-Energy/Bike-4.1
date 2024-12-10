@@ -1,0 +1,13 @@
+[Unit]
+Description = BMS In-House
+StartLimitIntervalSec=0
+
+[Service]
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/usr/error_test
+ExecStart=/usr/error_test/bms_ih
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Bluetooth Initialization
+Before=bluetooth.service
+ 
+[Service]
+Type=simple
+ExecStart=/home/root/script_files/BT_script.sh
+RemainAfterExit=yes
+Restart=always
+TimeoutStartSec=120s
+ 
+[Install]
+WantedBy=multi-user.target

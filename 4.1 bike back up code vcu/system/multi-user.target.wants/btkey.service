@@ -1,0 +1,13 @@
+[Unit]
+Description=Btkey
+
+[Service]
+Type=simple
+#ExecPre=/usr/bin/sleep 5
+ExecStart=/usr/release/btkey
+Environment="TARGET_MAC=48:23:35:3D:F1:54"
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

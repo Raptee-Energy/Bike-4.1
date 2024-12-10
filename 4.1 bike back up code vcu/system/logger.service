@@ -1,0 +1,14 @@
+[Unit]
+Description = Logger
+StartLimitIntervalSec=0
+
+[Service]
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/usr/release
+CPUQuota=10%
+ExecStart=/usr/release/logging
+
+[Install]
+WantedBy=multi-user.target

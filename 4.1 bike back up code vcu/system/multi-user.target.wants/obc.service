@@ -1,0 +1,14 @@
+[Unit]
+Description = OBC
+StartLimitIntervalSec=0
+
+[Service]
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/usr/release
+ExecStart=/usr/release/obc
+CPUQuota=10%
+
+[Install]
+WantedBy=multi-user.target

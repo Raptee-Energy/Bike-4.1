@@ -1,0 +1,14 @@
+[Unit]
+Description = PDU service
+StartLimitIntervalSec=0
+
+[Service]
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/release/pdu
+#ExecStart=/usr/error_test/pdu
+CPUQuota=50%
+
+[Install]
+WantedBy=multi-user.target
